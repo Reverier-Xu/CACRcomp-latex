@@ -1,0 +1,166 @@
+\documentclass[a4paper]{article}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\hypersetup{hidelinks,
+	colorlinks=true,
+	allcolors=black,
+	pdfstartview=Fit,
+	breaklinks=true
+}
+\usepackage{amsmath}
+\usepackage{xpatch}
+
+\ExplSyntaxOn
+\xpatchcmd \fontspec_new_script:nn
+  { \__fontspec_warning:nxx }
+  { \__fontspec_info:nxx }
+  {}{\fail}
+
+\newfontscript{CJK}{hani}
+\ExplSyntaxOff
+
+\usepackage{xeCJK}
+\usepackage{ctex}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+% for check box
+\usepackage{enumitem,amssymb}
+% for check symbol 
+\usepackage{pifont}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\newcommand{\cmark}{\ding{51}}% check mark
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}\hspace{-2.5pt}}
+\pagestyle{plain}
+
+\begin{document}
+\thispagestyle{empty}
+\noindent\parbox[c]{.6\linewidth}{
+	\linespread{1.3}
+	\itshape 编号： CACR20XXxxxxxx \par
+    \  \par
+    \  \par
+    作品类别：\done 软件设计\ \ {\rlap{$\square$}{\large\hspace{1pt}}}\ \ 硬件制作\ \ {\rlap{$\square$}{\large\hspace{1pt}}}\ \ 工程实践 \par
+}%
+\parbox[c]{.45\linewidth}{
+	\hfill\includegraphics[width=4cm]{imgs/logo.png}
+}
+
+\begin{center}
+
+\par\vspace{.2\textheight}
+
+{\Large\textbf{20xx年第X届全国密码技术竞赛作品设计报告}\par}
+\Large
+\rule{\textwidth}{0.5mm}
+\par\vspace{.05\textheight}
+\Large{题目：示例题目}
+
+\medbreak
+\par\vspace{.25\textheight}
+\medbreak
+20xx年xx月xx日
+\medbreak
+中国密码学会
+\end{center}
+\vfill
+% 项目信息
+\begin{center}
+        \begin{tabular}{ | p{.95\hsize} | }
+    \hline
+    基本信息表 \\
+    \hline
+    编号：CACR20XXxxxxxx \\
+    \hline
+    作品题目：示例题目\\
+    \hline
+    作品类别：\done 软件设计\ \ {\rlap{$\square$}{\large\hspace{1pt}}}\ \ 硬件制作\ \ \ {\rlap{$\square$}{\large\hspace{1pt}}}\ \ 工程实践 \\
+    \hline
+    作品内容摘要：\\
+    \par 摘要
+\\\\
+作品特色：\\
+\ \ \ \ 1）特色：\\
+\ \ \ \ 2）特色：\\
+\ \ \ \ 3）特色：\\
+\ \ \ \ 4）特色：\\
+\hline
+关键词：\\
+示例关键词
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\clearpage
+\tableofcontents
+\clearpage
+\section{第一章 - 作品概述}
+\subsection{引言}
+示例引用\cite{ref1}
+示例段落1\par
+示例段落2\par
+示例代码\par
+
+\begin{lstlisting}
+// HelloWorld.c
+int main(int argc, char *argv[]) {
+    printf("Hello World!");
+    return 0;
+}
+\end{lstlisting}
+
+<more>
+\subsection{研究背景与意义}
+<more>
+\subsection{国内外研究现状}
+<more>
+\clearpage
+\section{第二章 - 设计实现与方案}
+<more>
+\clearpage
+\section{第三章 - 系统测试与结果}
+<more>
+\subsection{测试方案}
+<more>
+\subsection{功能测试}
+<more>
+\clearpage
+\section{第四章 - 应用前景}
+<more>
+\clearpage
+\section{第五章 - 结论}
+<more>
+\clearpage
+\begin{thebibliography}{99}
+    \bibitem{ref1} 示例引用文章
+\end{thebibliography}
+
+\end{document}
